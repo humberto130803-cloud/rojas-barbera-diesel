@@ -22,18 +22,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-blue-accent flex items-center justify-center font-[var(--font-heading)] font-bold text-white text-lg">
-                RB
-              </div>
-              <div>
-                <span className="font-[var(--font-heading)] font-bold text-white text-lg tracking-wide uppercase">
-                  Rojas Barbera
-                </span>
-                <span className="block text-[10px] text-steel-400 tracking-[0.3em] uppercase -mt-1">
-                  Diesel
-                </span>
-              </div>
+            <div className="mb-4">
+              <span className="font-['Lora'] italic font-bold text-blue-accent text-2xl leading-none tracking-tight">
+                Barbera{' '}
+                <span className="text-white">Diesel</span>
+              </span>
             </div>
             <p className="text-steel-400 text-sm leading-relaxed mb-6">
               Especialistas en sistemas de inyección diésel de alta complejidad.

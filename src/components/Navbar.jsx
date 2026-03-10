@@ -34,18 +34,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-blue-accent flex items-center justify-center font-[var(--font-heading)] font-bold text-white text-lg">
-              RB
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-[var(--font-heading)] font-bold text-white text-lg tracking-wide uppercase">
-                Rojas Barbera
-              </span>
-              <span className="block text-[10px] text-steel-400 tracking-[0.3em] uppercase -mt-1">
-                Diesel
-              </span>
-            </div>
+          <a href="#inicio" className="group">
+            <span className="font-['Lora'] italic font-bold text-blue-accent text-2xl sm:text-3xl leading-none tracking-tight">
+              Barbera{' '}
+              <span className="text-white">Diesel</span>
+            </span>
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
