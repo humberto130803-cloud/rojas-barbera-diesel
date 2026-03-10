@@ -40,17 +40,7 @@ export default function WhyUs() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden isolate" style={{ WebkitTransform: 'translateZ(0)' }}>
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1504222490345-c075b6008014?w=1920&q=80"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-navy-950/95" />
-      </div>
-
+    <section className="relative py-24 lg:py-32 overflow-hidden isolate bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -65,10 +55,10 @@ export default function WhyUs() {
             </span>
             <div className="h-px w-12 bg-blue-accent" />
           </div>
-          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             La Diferencia <span className="text-blue-accent">Rojas Barbera</span>
           </h2>
-          <p className="text-steel-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
             Donde otros ven complejidad, nosotros vemos una operación que necesita
             un socio técnico confiable.
           </p>
@@ -81,15 +71,15 @@ export default function WhyUs() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-navy-800/30 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-blue-accent/30 hover:bg-navy-800/50 transition-all duration-500"
+              className="group bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-blue-accent/40 hover:shadow-xl hover:shadow-blue-accent/5 transition-all duration-500"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-accent/20 to-blue-accent/5 border border-blue-accent/20 flex items-center justify-center mb-6 group-hover:border-blue-accent/40 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-blue-accent/10 border border-blue-accent/20 flex items-center justify-center mb-6 group-hover:bg-blue-accent/15 transition-colors">
                 <reason.icon className="text-blue-accent text-2xl" />
               </div>
-              <h3 className="font-[var(--font-heading)] text-xl font-bold text-white mb-3">
+              <h3 className="font-[var(--font-heading)] text-xl font-bold text-slate-800 mb-3">
                 {reason.title}
               </h3>
-              <p className="text-steel-400 text-sm leading-relaxed">
+              <p className="text-slate-500 text-sm leading-relaxed">
                 {reason.text}
               </p>
             </motion.div>

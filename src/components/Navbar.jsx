@@ -28,7 +28,7 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-navy-950/95 backdrop-blur-md shadow-lg shadow-black/30 border-b border-white/5'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-black/5 border-b border-slate-200'
           : 'bg-transparent'
       }`}
     >
@@ -36,9 +36,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <a href="#inicio" className="flex items-center gap-3 group">
             <img src="/logo.jpg" alt="Rojas Barbera Diesel" className="h-14 w-auto" />
-            <span className="hidden sm:inline font-['Lora'] italic font-bold text-blue-accent text-2xl leading-none tracking-tight">
+            <span className={`hidden sm:inline font-['Lora'] italic font-bold text-blue-accent text-2xl leading-none tracking-tight`}>
               Rojas Barbera{' '}
-              <span className="text-white">Diesel</span>
+              <span className={scrolled ? 'text-slate-800' : 'text-white'}>Diesel</span>
             </span>
           </a>
 
@@ -47,13 +47,17 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm text-steel-400 hover:text-white transition-colors font-medium tracking-wide uppercase"
+                className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+                  scrolled
+                    ? 'text-slate-500 hover:text-slate-900'
+                    : 'text-white/70 hover:text-white'
+                }`}
               >
                 {link.name}
               </a>
             ))}
             <a
-              href="https://wa.me/5076070-1905"
+              href="https://wa.me/50760701905"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-accent hover:bg-blue-light text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-blue-accent/25"
@@ -64,7 +68,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-white p-2"
+            className={`lg:hidden p-2 ${scrolled ? 'text-slate-800' : 'text-white'}`}
             aria-label="Menu"
           >
             {open ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
@@ -78,7 +82,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-navy-900/98 backdrop-blur-lg border-t border-white/5"
+            className="lg:hidden bg-white/98 backdrop-blur-lg border-t border-slate-200"
           >
             <div className="px-6 py-6 space-y-4">
               {links.map((link) => (
@@ -86,13 +90,13 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block text-steel-300 hover:text-white transition-colors font-medium tracking-wide uppercase text-sm"
+                  className="block text-slate-600 hover:text-slate-900 transition-colors font-medium tracking-wide uppercase text-sm"
                 >
                   {link.name}
                 </a>
               ))}
               <a
-                href="https://wa.me/5076070-1905"
+                href="https://wa.me/50760701905"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center bg-blue-accent text-white px-5 py-3 rounded-lg font-semibold mt-4"

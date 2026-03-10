@@ -35,9 +35,7 @@ export default function Process() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="proceso" className="relative py-24 lg:py-32 overflow-hidden isolate" style={{ WebkitTransform: 'translateZ(0)' }}>
-      <div className="absolute inset-0 bg-navy-950" />
-
+    <section id="proceso" className="relative py-24 lg:py-32 overflow-hidden isolate bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,10 +50,10 @@ export default function Process() {
             </span>
             <div className="h-px w-12 bg-blue-accent" />
           </div>
-          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Cómo <span className="text-blue-accent">Trabajamos</span>
           </h2>
-          <p className="text-steel-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
             Un proceso estructurado y transparente que garantiza resultados
             confiables en cada reparación.
           </p>
@@ -72,13 +70,13 @@ export default function Process() {
             >
               {/* Connector line */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-[calc(50%+40px)] right-[-calc(50%-40px)] w-full h-px bg-gradient-to-r from-blue-accent/40 to-blue-accent/10" />
+                <div className="hidden lg:block absolute top-10 left-[calc(50%+40px)] right-[-calc(50%-40px)] w-full h-px bg-gradient-to-r from-blue-accent/30 to-blue-accent/5" />
               )}
 
               <div className="text-center">
                 {/* Number + Icon */}
                 <div className="relative inline-flex items-center justify-center mb-6">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-accent/20 to-navy-800 border border-blue-accent/20 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-2xl bg-blue-accent/10 border border-blue-accent/20 flex items-center justify-center">
                     <step.icon className="text-blue-accent text-3xl" />
                   </div>
                   <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-blue-accent text-white text-xs font-bold flex items-center justify-center">
@@ -86,10 +84,10 @@ export default function Process() {
                   </span>
                 </div>
 
-                <h3 className="font-[var(--font-heading)] text-xl font-bold text-white mb-3">
+                <h3 className="font-[var(--font-heading)] text-xl font-bold text-slate-800 mb-3">
                   {step.title}
                 </h3>
-                <p className="text-steel-400 text-sm leading-relaxed">
+                <p className="text-slate-500 text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

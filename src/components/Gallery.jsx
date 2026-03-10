@@ -19,9 +19,7 @@ export default function Gallery() {
   const [lightbox, setLightbox] = useState(null)
 
   return (
-    <section id="instalaciones" className="relative py-24 lg:py-32 overflow-hidden isolate" style={{ WebkitTransform: 'translateZ(0)' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
-
+    <section id="instalaciones" className="relative py-24 lg:py-32 overflow-hidden isolate bg-slate-50" style={{ WebkitTransform: 'translateZ(0)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,10 +34,10 @@ export default function Gallery() {
             </span>
             <div className="h-px w-12 bg-blue-accent" />
           </div>
-          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Un Laboratorio de <span className="text-blue-accent">Clase Mundial</span>
           </h2>
-          <p className="text-steel-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
             Instalaciones diseñadas para ofrecer el más alto estándar de servicio
             en reparación de sistemas diésel.
           </p>
@@ -52,7 +50,7 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={`group relative overflow-hidden rounded-xl cursor-pointer ${img.span}`}
+              className={`group relative overflow-hidden rounded-xl cursor-pointer shadow-md ${img.span}`}
               onClick={() => setLightbox(img)}
             >
               <img
@@ -60,7 +58,7 @@ export default function Gallery() {
                 alt={img.caption}
                 className="w-full h-full min-h-[200px] object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <p className="text-white text-sm font-medium">{img.caption}</p>
               </div>

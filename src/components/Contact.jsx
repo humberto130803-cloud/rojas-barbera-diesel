@@ -22,9 +22,9 @@ const contactInfo = [
 ]
 
 const socials = [
-  { icon: FaWhatsapp, label: 'WhatsApp', href: 'https://wa.me/50760701905', color: 'hover:bg-green-600' },
-  { icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/RojasBarberaDiesel', color: 'hover:bg-pink-600' },
-  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/rojas-barbera-diesel', color: 'hover:bg-blue-700' },
+  { icon: FaWhatsapp, label: 'WhatsApp', href: 'https://wa.me/50760701905', color: 'hover:bg-green-600 hover:text-white' },
+  { icon: FaInstagram, label: 'Instagram', href: 'https://www.instagram.com/RojasBarberaDiesel', color: 'hover:bg-pink-600 hover:text-white' },
+  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/rojas-barbera-diesel', color: 'hover:bg-blue-700 hover:text-white' },
 ]
 
 export default function Contact() {
@@ -32,17 +32,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="contacto" className="relative py-24 lg:py-32 overflow-hidden isolate" style={{ WebkitTransform: 'translateZ(0)' }}>
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src="/gallery-5.jpg"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-navy-950/95" />
-      </div>
-
+    <section id="contacto" className="relative py-24 lg:py-32 overflow-hidden isolate bg-slate-50" style={{ WebkitTransform: 'translateZ(0)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left - CTA */}
@@ -58,12 +48,12 @@ export default function Contact() {
               </span>
             </div>
 
-            <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               ¿Necesita Soporte{' '}
               <span className="text-blue-accent">Técnico Diésel?</span>
             </h2>
 
-            <p className="text-steel-400 text-lg leading-relaxed mb-10">
+            <p className="text-slate-500 text-lg leading-relaxed mb-10">
               Estamos listos para atender su consulta. Solicite una cotización o
               agende una visita a nuestras instalaciones para conocer cómo podemos
               ser su socio técnico confiable.
@@ -89,7 +79,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className={`w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-steel-400 hover:text-white transition-all ${social.color}`}
+                  className={`w-12 h-12 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-400 transition-all ${social.color}`}
                 >
                   <social.icon className="text-xl" />
                 </a>
@@ -110,27 +100,27 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                className="bg-navy-800/40 backdrop-blur-sm border border-white/5 rounded-xl p-6 flex gap-5"
+                className="bg-white border border-slate-200 rounded-xl p-6 flex gap-5 shadow-sm"
               >
                 <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-blue-accent/10 border border-blue-accent/20 flex items-center justify-center">
                   <info.icon className="text-blue-accent text-2xl" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-2">{info.title}</h3>
+                  <h3 className="text-slate-800 font-semibold mb-2">{info.title}</h3>
                   {info.lines.map((line, j) => (
-                    <p key={j} className="text-steel-400 text-sm">{line}</p>
+                    <p key={j} className="text-slate-500 text-sm">{line}</p>
                   ))}
                 </div>
               </motion.div>
             ))}
 
             {/* Map embed */}
-            <div className="rounded-xl overflow-hidden border border-white/5 h-[200px]">
+            <div className="rounded-xl overflow-hidden border border-slate-200 h-[200px] shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7!2d-79.49!3d9.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnMzYuMCJOIDc5wrAyOScyNC4wIlc!5e0!3m2!1ses!2spa!4v1"
                 width="100%"
                 height="100%"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.9) contrast(0.9)' }}
+                style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

@@ -26,10 +26,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="nosotros" className="relative py-24 lg:py-32 overflow-hidden isolate" style={{ WebkitTransform: 'translateZ(0)' }}>
-      {/* Subtle background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
-
+    <section id="nosotros" className="relative py-24 lg:py-32 overflow-hidden isolate bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image */}
@@ -39,13 +36,12 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="/gallery-2.jpg"
                 alt="Recepción Rojas Barbera Diesel"
                 className="w-full h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent" />
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-4 sm:right-4 bg-blue-accent rounded-xl p-6 shadow-2xl shadow-blue-accent/20">
@@ -69,19 +65,19 @@ export default function About() {
               </span>
             </div>
 
-            <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Más de 60 Años de{' '}
               <span className="text-blue-accent">Excelencia Técnica</span>
             </h2>
 
-            <p className="text-steel-400 text-lg leading-relaxed mb-6">
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
               Con más de 60 años de experiencia en el oficio, tres generaciones dedicadas
               a la reparación diésel y 22+ años de operación continua en Panamá,
               convertimos complejidad técnica en operaciones confiables y sostenibles
               para equipos industriales y flotas corporativas.
             </p>
 
-            <p className="text-steel-400 leading-relaxed mb-10">
+            <p className="text-slate-500 leading-relaxed mb-10">
               Nos enfocamos en procedimientos técnicos formales, análisis de causa raíz
               y documentación clara por unidad, entregando soluciones que se integran
               con los procesos de mantenimiento y operaciones de nuestros clientes.
@@ -100,8 +96,8 @@ export default function About() {
                     <pillar.icon className="text-blue-accent text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{pillar.title}</h3>
-                    <p className="text-steel-400 text-sm leading-relaxed">{pillar.text}</p>
+                    <h3 className="text-slate-800 font-semibold mb-1">{pillar.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed">{pillar.text}</p>
                   </div>
                 </motion.div>
               ))}
