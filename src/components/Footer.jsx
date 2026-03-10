@@ -22,7 +22,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo.jpg" alt="Rojas Barbera Diesel" className="h-14 w-auto" />
               <span className="font-['Lora'] italic font-bold text-blue-accent text-2xl leading-none tracking-tight">
                 Rojas Barbera{' '}
                 <span className="text-white">Diesel</span>
