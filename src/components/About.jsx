@@ -49,7 +49,7 @@ export default function About() {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-4 sm:right-4 bg-blue-accent rounded-xl p-6 shadow-2xl shadow-blue-accent/20">
-              <p className="font-[var(--font-heading)] text-4xl font-bold text-white">22+</p>
+              <p className="font-[var(--font-heading)] text-4xl font-bold text-white">60+</p>
               <p className="text-white/80 text-sm">Años de<br />Experiencia</p>
             </div>
             {/* Decorative border */}
@@ -70,14 +70,15 @@ export default function About() {
             </div>
 
             <h2 className="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-              Tres Generaciones de{' '}
+              Más de 60 Años de{' '}
               <span className="text-blue-accent">Excelencia Técnica</span>
             </h2>
 
             <p className="text-steel-400 text-lg leading-relaxed mb-6">
-              Con más de 22 años de experiencia continua en Panamá y tres generaciones
-              dedicadas al oficio, convertimos complejidad técnica en operaciones
-              confiables y sostenibles para equipos industriales y flotas corporativas.
+              Con más de 60 años de experiencia en el oficio, tres generaciones dedicadas
+              a la reparación diésel y 22+ años de operación continua en Panamá,
+              convertimos complejidad técnica en operaciones confiables y sostenibles
+              para equipos industriales y flotas corporativas.
             </p>
 
             <p className="text-steel-400 leading-relaxed mb-10">

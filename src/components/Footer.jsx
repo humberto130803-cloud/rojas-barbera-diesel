@@ -31,7 +31,8 @@ export default function Footer() {
             </div>
             <p className="text-steel-400 text-sm leading-relaxed mb-6">
               Especialistas en sistemas de inyección diésel de alta complejidad.
-              22+ años de experiencia, 3 generaciones dedicadas al oficio.
+              Más de 60 años de experiencia, 3 generaciones dedicadas al oficio.
+              22+ años en Panamá.
             </p>
             <div className="flex gap-3">
               {socials.map((social) => (

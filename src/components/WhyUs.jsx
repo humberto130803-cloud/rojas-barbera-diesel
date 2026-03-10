@@ -5,8 +5,8 @@ import { HiAcademicCap, HiBeaker, HiClipboardCheck, HiClock, HiDocumentText, HiU
 const reasons = [
   {
     icon: HiAcademicCap,
-    title: '3 Generaciones',
-    text: 'Conocimiento transmitido y perfeccionado a lo largo de tres generaciones de maestros técnicos diésel.',
+    title: '60+ Años, 3 Generaciones',
+    text: 'Más de 60 años de experiencia en reparación diésel, transmitida y perfeccionada a lo largo de tres generaciones.',
   },
   {
     icon: HiBeaker,

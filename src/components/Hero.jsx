@@ -38,7 +38,7 @@ export default function Hero() {
           >
             <div className="h-px w-12 bg-blue-accent" />
             <span className="text-blue-accent font-semibold tracking-[0.2em] uppercase text-sm">
-              22+ Años de Experiencia
+              Más de 60 Años de Experiencia
             </span>
           </motion.div>
 
@@ -59,8 +59,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg sm:text-xl text-steel-400 max-w-2xl mb-10 leading-relaxed"
           >
-            Tres generaciones dedicadas al oficio. Soporte técnico confiable para
-            equipos industriales y flotas corporativas donde la falla no es una opción.
+            Más de 60 años de experiencia y tres generaciones dedicadas al oficio.
+            22+ años en Panamá brindando soporte técnico confiable para equipos
+            industriales y flotas corporativas donde la falla no es una opción.
           </motion.p>
 
           <motion.div
@@ -95,9 +96,9 @@ export default function Hero() {
             className="grid grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/10 max-w-lg"
           >
             {[
-              { value: '22+', label: 'Años' },
+              { value: '60+', label: 'Años de Experiencia' },
+              { value: '22+', label: 'Años en Panamá' },
               { value: '3', label: 'Generaciones' },
-              { value: '100%', label: 'Compromiso' },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-[var(--font-heading)] text-3xl sm:text-4xl font-bold text-white">
