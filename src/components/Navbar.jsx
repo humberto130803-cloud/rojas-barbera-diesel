@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <a href="#inicio" className="group">
             <span className="font-['Lora'] italic font-bold text-blue-accent text-2xl sm:text-3xl leading-none tracking-tight">
-              Barbera{' '}
+              Rojas Barbera{' '}
               <span className="text-white">Diesel</span>
             </span>
           </a>

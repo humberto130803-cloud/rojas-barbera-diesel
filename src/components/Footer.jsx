@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <span className="font-['Lora'] italic font-bold text-blue-accent text-2xl leading-none tracking-tight">
-                Barbera{' '}
+                Rojas Barbera{' '}
                 <span className="text-white">Diesel</span>
               </span>
             </div>
